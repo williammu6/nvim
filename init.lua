@@ -13,8 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     'wbthomason/packer.nvim', 'morhetz/gruvbox', {
         'nvim-lualine/lualine.nvim',
+        "Mofiqul/vscode.nvim",
         dependencies = {'kyazdani42/nvim-web-devicons', opt = true}
-    }, "lukas-reineke/indent-blankline.nvim",
+    }, 
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
     {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}, {
         'nvim-telescope/telescope.nvim',
         dependencies = {
@@ -30,12 +32,7 @@ require("lazy").setup({
     }, {
         "folke/trouble.nvim",
         config = function()
-            require("trouble").setup {
-                icons = true
-                -- your configuration comes here
-                -- or leave it empty to  the default settings
-                -- refer to the configuration section below
-            }
+            require("trouble").setup { icons = true }
         end
     }, {
         'nvim-treesitter/nvim-treesitter',
@@ -56,7 +53,8 @@ require("lazy").setup({
             {'hrsh7th/nvim-cmp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
             {'saadparwaiz1/cmp_luasnip'}, {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'}, {'hrsh7th/cmp-nvim-lsp-signature-help'}, -- Snippets
-            {'L3MON4D3/LuaSnip'}, {'rafamadriz/friendly-snippets'},
+            -- {'L3MON4D3/LuaSnip'}, 
+            {'rafamadriz/friendly-snippets'},
             {"ray-x/lsp_signature.nvim"}
         }
     }, "MunifTanjim/eslint.nvim", "petrbroz/vim-glsl"
