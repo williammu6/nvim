@@ -11,7 +11,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    'wbthomason/packer.nvim', 'morhetz/gruvbox', {
+    'rose-pine/neovim', 'morhetz/gruvbox', {
         'nvim-lualine/lualine.nvim',
         "Mofiqul/vscode.nvim",
         dependencies = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -44,6 +44,7 @@ require("lazy").setup({
         end
     }, ("nvim-treesitter/playground"), ("mbbill/undotree"),
     ("tpope/vim-fugitive"), ("nvim-treesitter/nvim-treesitter-context"),
+    ("nvim-pack/nvim-spectre"),
     ("sbdchd/neoformat"), {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
